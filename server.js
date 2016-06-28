@@ -5,7 +5,6 @@ var path = require('path');
 var routes = require('./app/routes/routes.js');
 var morgan = require("morgan");
 
-var async = require('async');
 var express = require('express');
 
 var app = express();
