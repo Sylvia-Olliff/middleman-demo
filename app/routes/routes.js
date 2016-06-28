@@ -25,4 +25,12 @@ module.exports = function(app) {
     app.post('/', requestedOn, function(req, res){
          
     });
+    
+    app.get('/*', requestedOn, function(req, res){
+        res.render('404.ejs'); 
+    });
+    
+    app.post('/*', requestedOn, function(req, res){
+        res.render('404.ejs');
+    });
 };
