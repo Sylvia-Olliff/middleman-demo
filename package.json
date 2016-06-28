@@ -1,0 +1,16 @@
+{
+  "name": "middleman-auth-val-demo",
+  "version": "0.1.0",
+  "description": "A web service example for middle man authentication and validation",
+  "main": "server.js",
+  "repository": "",
+  "author": "Joesph Olliff <joeolliff@gmail.com>",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "latest",
+    "mongodb" : "latest",
+    "mongoose" : "latest",
+    "ejs" : "latest",
+    "morgan" : "latest"
+  }
+}
