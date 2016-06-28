@@ -1,14 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <title>Demo Description</title>
-    <head></head>
-    <body>
-        <h2>Web Service Middleware Demo</h2>
-        <p>
-            This web service accepts a post containing a json object containing either "query" or "input", 
-            cleans the contents logging what was sent and what was left after cleaning.
-            
-            Please go to <a href="/logged">/logged</a> to view requests made and cleaned. 
-        </p>
-    </body>
+<head>
+	<title>Webservice Middleman Demo</title>
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+		body {
+			padding-top:80px; word-wrap:break-word; 
+		}
+    </style>
+
+    <script type="text/javascript">
+        
+    </script>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header text-center">
+        	<h1>Webservice Demo</h1>
+    	</div>
+
+    	<div class="row">
+
+    		<div class="col-sm-6">
+    			<div class="well">
+    				 <p>This is a demo of a middleman service that cleans up incoming SQL requests.</p>
+    				 <p>    It expects the following parameters</p>
+    				 <br />
+    				 <ul>
+    				     <li>
+    				         JSON object format
+    				     </li>
+    				     <li>
+    				         first item in the JSON object MUST be a flag stating the type of request (i.e. "SELECT" , "DELETE", etc...)
+    				     </li>
+    				     <li>
+    				         If the type flag is "DELETE" the second item must be an authentication key provided by the system upon successful login.
+    				     </li>
+    				     <li>
+    				         The second item (or third in the case of delete) is the SQL statement being sent
+    				     </li>
+    				 </ul>
+    			</div>
+    		</div>
+    	</div>
+	</div>
+</body>
 </html>
