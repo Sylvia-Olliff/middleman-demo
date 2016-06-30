@@ -16,14 +16,16 @@ function requestedOn(req, res, next) {
 	return next();
 }
 
-module.exports = function(app) {
+module.exports = function(app, cleaner) {
+    
+    app.use(requestTime);
     
     app.get('/', requestedOn, function(req, res) {
         res.render('index.ejs');   
     });
     
-    app.post('/', requestedOn, function(req, res){
-         
+    app.post('/', requestedOn, cleaner.clean, function(req, res){
+         res.send(req.response);
     });
     
     app.get('/*', requestedOn, function(req, res){

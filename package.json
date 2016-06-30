@@ -7,10 +7,11 @@
   "author": "Joesph Olliff <joeolliff@gmail.com>",
   "dependencies": {
     "async": "~0.2.8",
-    "express": "latest",
+    "express": "4.13.3",
     "mongodb" : "latest",
     "mongoose" : "latest",
     "ejs" : "latest",
-    "morgan" : "latest"
+    "morgan" : "latest",
+    "body-parser": "~1.0.0"
   }
 }
