@@ -9,6 +9,8 @@ module.exports = {
         
         var query = "";
         
+        console.log(req.body);
+        
         switch(data[keys[0]]){
             case "SELECT":
                 query = data[keys[1]].replace(/([^(),\w\s])/g, '');
@@ -26,15 +28,14 @@ module.exports = {
                 break;
                 
             case "UPDATE":
-                
+                query = data[keys[1]].replace(/([^(),\w\s])/g, '');
+                req.response = query;
                 break;
                 
             default:
-                
+                req.response = "Unknown Submission Type";
                 break;
         }
-        
-        // .replace(/([^(),\w\s;])/gi, '');
         
         next();
     }
